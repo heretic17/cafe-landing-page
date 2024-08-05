@@ -21,6 +21,10 @@ body{
     background-color: var(--cream);
 }
 
+section {
+    padding: 10rem 0 10rem 0;
+}
+
 section:nth-child(even) {
     background-color: white;
 }
@@ -35,9 +39,6 @@ footer {
     margin-bottom: 0;
 }
 
-/* .navbar-default {
-    background-color: var(--cream);
-} */
 
 .title {
     background-color: var(--coffee-brown);
@@ -54,9 +55,13 @@ footer {
     color: var(--cream);
 }
 
+.text-center {
+    font-size: large;
+}
+
 #contact {
     color: var(--very-dark-blue);
-    padding-bottom: 5vh;
+    padding: 10rem 15rem 15rem 15rem;
 }
 
 #contact h2 {
@@ -79,9 +84,10 @@ footer {
 }
 
 .hero {
-    background-image: url("assets/Roasted_coffee_beans.jpg");
+    background-image: url("assets/hero-img-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: .9;
     
     min-block-size: 80vh;
     place-content: center;
@@ -100,9 +106,13 @@ footer {
 }
 
 .page-title {
-    padding: 5vh;
+    padding: 15rem 0 15rem 0;
     text-align: center;
     margin-top: 0;
+}
+
+.card-title {
+    padding: 5rem;
 }
 
 .img-responsive {
@@ -122,7 +132,37 @@ li {
     list-style: none;
 }
 
+.cmenu {
+    display: grid;
+    grid-template-columns: 35rem 35rem 35rem 35rem;
+    gap: 10rem;
+    padding: 10px;
+    justify-content: center;
+}
+
+.menu-card {
+    border: 2px outset var(--very-dark-blue);
+    padding: 0 1rem 0 1rem;
+    border-radius: 1rem;
+    transition: box-shadow .2s; 
+    will-change: box-shadow; /* Optimize rendering */
+    backface-visibility: hidden; /* Improve rendering performance */
+}
+
+.menu-card:hover {
+    box-shadow: 10px 10px 20px var(--dark-grayish-blue);
+    transition: transform .2s;
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+
 @media screen and (max-width: 390px){
+    .hero {
+        background-image: url("assets/hero-img-mobile.jpg");
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .cmenu {
         display: flex;           /* Use flexbox layout */
         flex-direction: column;  /* Arrange children in a column */
@@ -141,6 +181,10 @@ li {
     
     .cmenu li {
         margin: 0.5em 0;         /* Add some vertical margin for spacing */
+    }
+
+    #contact {
+        padding: 0 1rem 5rem 1rem;
     }
     
 }
