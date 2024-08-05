@@ -79,7 +79,7 @@ footer {
 }
 
 .hero {
-    background-image: url("/assets/Roasted_coffee_beans.jpg");
+    background-image: url("assets/Roasted_coffee_beans.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
