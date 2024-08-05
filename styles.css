@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --coffee-brown: #6F4E37;
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--cream);
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+footer {
+    text-align: center;
+    margin: auto;
+    padding: 2vh;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+/* .navbar-default {
+    background-color: var(--cream);
+} */
+
+.title {
+    background-color: var(--coffee-brown);
+    margin: 0;
+    padding: 2vh 0 1vh 3vw;
+    color: var(--cream);
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--very-dark-blue);
+}
+
+.white-title, .text-center {
+    color: var(--cream);
+}
+
+#contact {
+    color: var(--very-dark-blue);
+    padding-bottom: 5vh;
+}
+
+#contact h2 {
+    padding: 5vh;
+    margin: 5vh;
+}
+
+#contact a, 
+#contact span,
+#contact h2,
+#contact p,
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: var(--very-dark-blue);
+}
+
+#about {
+    background-image: url("/assets/Roasted_coffee_beans.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    min-block-size: 80vh;
+    place-content: center;
+    text-align: center;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+}
+
+/*Intro*/
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10vw 0 10vw;
+    line-height: 2;
+    padding: 15vh 5vh 15vh 5vh;
+}
+
+.page-title {
+    padding: 5vh;
+    text-align: center;
+    margin-top: 0;
+}
+
+.img-responsive {
+    height: 140%;
+    width: 150%;
+}
+
+/*Menu*/
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 390px){
+    .cmenu {
+        display: flex;           /* Use flexbox layout */
+        flex-direction: column;  /* Arrange children in a column */
+        align-items: center;     /* Center align items horizontally */
+        justify-content: center;
+        text-align: center;      /* Center align text */
+        max-width: 300px;        /* Set a maximum width */
+        margin: 0 auto;  
+    }
+    
+    .cmenu ul {
+        list-style: none;        /* Remove default bullet points */
+        padding: 0;              /* Remove default padding */
+        margin: 0;               /* Remove default margin */
+    }
+    
+    .cmenu li {
+        margin: 0.5em 0;         /* Add some vertical margin for spacing */
+    }
+    
+}
+    
