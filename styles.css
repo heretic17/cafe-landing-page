@@ -191,7 +191,7 @@ li {
 }
 
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 1080px){
     .hero {
         background-image: url("assets/hero-img-mobile.jpg");
         position: relative;
