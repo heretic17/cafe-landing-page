@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
@@ -46,14 +48,14 @@
         </div>
     </header>
 
-    <section id="about" class="hero overlay">
-        <div class="mainpage">
+    <section id="about " class="hero overlay">
+        <div class="mainpage slideanim">
             <h1 class="white-title">Welcome to Cozy Bean Cafe</h1>
             <!-- <div class="image-container">
                 <img class="coffee-beans" src="assets/Roasted_coffee_beans.jpg" alt="coffee beans">
             </div> -->
-            <div class="intro-container">
-                <p class="text-center">Nestled in the heart of the city, Cozy Bean Cafe is your perfect getaway from the hustle and bustle of daily life. Our passion for crafting the finest coffee blends is 
+            <div class="intro-container ">
+                <p class="text-center ">Nestled in the heart of the city, Cozy Bean Cafe is your perfect getaway from the hustle and bustle of daily life. Our passion for crafting the finest coffee blends is 
                     matched only by our commitment to providing a warm and inviting atmosphere. Whether you're here to savor a freshly brewed cup of coffee, catch up with friends, or 
                     simply relax with a good book, Cozy Bean Cafe is your home away from home. Come and experience the cozy comfort and delightful aromas that make us a beloved spot for 
                     coffee lovers everywhere.</p>
@@ -63,9 +65,9 @@
 
     <section id="menu">
         <div class="menu-container">
-            <h1 class="page-title">Cozy Bean Cafe Menu</h1>
+            <h1 class="page-title slideanim">Cozy Bean Cafe Menu</h1>
                 <div class="cmenu">
-                    <div class="menu-card">
+                    <div class="menu-card slideanim">
                         <h2 class="card-title">Coffee</h2>
                         <ul class="menu-items">
                             <li><b>Espresso</b> - A rich, full-bodied shot of pure coffee perfection.</li>
@@ -81,7 +83,7 @@
                         </ul>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card slideanim">
                         <h2 class="card-title">Specialty Drinks</h2>
                         <ul class="menu-items">
                             <li><b>Caramel Macchiato</b> - A sweet and creamy espresso drink with caramel syrup and a drizzle on top.</li>
@@ -97,7 +99,7 @@
                         </ul>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card slideanim">
                         <h2 class="card-title">Tea & Other Beverages</h2>
                         <ul class="menu-items">
                             <li><b>Chai Latte</b> - Spiced black tea blended with steamed milk.</li>
@@ -113,7 +115,7 @@
                         </ul>
                     </div>
 
-                    <div class="menu-card">
+                    <div class="menu-card slideanim">
                         <h2 class="card-title">Pastries & Snacks</h2>
                         <ul class="menu-items">
                             <li><b>Croissants</b> - Flaky and buttery, freshly baked.</li>
@@ -130,14 +132,14 @@
                     </ul>
                 </div>
             </div>
-        </di>
+        </div>
     </section>
 
     <section id="contact">
         <div id="contact-container" class="container-fluid bg-grey">
-            <h2 class="text-center blue-title">CONTACT</h2>
+            <h2 class="text-center blue-title slideanim">CONTACT</h2>
             <div class="row">
-              <div class="col-sm-5">
+              <div class="col-sm-5 slideanim">
                 <p>Contact us and we'll get back to you within 24 hours.</p>
                 <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
                 <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
@@ -166,7 +168,20 @@
     <footer>
         <p>Page made by <a target="_blank" href="https://www.linkedin.com/in/m-kaan-eren/">Kaan Eren</a></p>
     </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 800) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
 </body>
 </html>
